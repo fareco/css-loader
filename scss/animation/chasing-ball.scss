@@ -1,0 +1,40 @@
+@import '../variables';
+
+.chasing-ball {
+	.loader {
+		width: $loader-height;
+		height: $loader-height;
+		animation: rotate $loader-duration linear infinite;
+
+		.ball1, .ball2 {
+			position: absolute;
+			top: 0;
+			width: 60%;
+			height: 60%;
+			border-radius: 50%;
+			background-color: #fff;
+			animation: bounce $loader-duration linear infinite;
+		}
+		.ball2 {
+			top: auto;
+			bottom: 0;
+			animation-delay: -$loader-duration/2;
+		}
+	}
+}
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes bounce {
+	50% {
+		transform: scale(0);
+	}
+}
+@keyframes chasingBall{
+	50%{},
+	100% {
+		transform: rotate(360deg);
+	}
+}

@@ -1,0 +1,40 @@
+@import '../variables';
+$loader-duration: $loader-duration/2;
+
+.arc-rotate {
+	.loader {
+		width: $loader-height;
+		height: $loader-height;
+
+		>div {
+			position: absolute;
+			border: 2px solid;
+			border-color: transparent $loader-color;
+			border-radius: 50%;
+			animation: load $loader-duration infinite ease-in-out;
+		}
+		.arc-1 {
+			margin: 32% 0 0 32%;
+			width: 36%;
+			height: 36%;
+		}
+		.arc-2 {
+			margin: 40% 0 0 40%;
+			width: 20%;
+			height: 20%;
+			animation-direction: reverse;
+			animation-delay: -$loader-duration/2;
+		}
+	}
+}
+@keyframes load {
+	0% {
+		transform: rotate(0) scale(1);
+	}
+	50% {
+		transform: rotate(180deg) scale(.6);
+	}
+	100% {
+		transform: rotate(360deg) scale(1);
+	}
+}

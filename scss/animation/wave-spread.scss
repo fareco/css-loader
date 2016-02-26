@@ -1,0 +1,27 @@
+@import '../variables';
+$loader-duration: 1s;
+
+.wave-spread {
+	.loader {
+		width: $loader-height;
+		height: $loader-height;
+
+		>div {
+			float: left;
+			margin: 40% 2% 0 0;
+			width: 4%;
+			height: 16%;
+			background-color: $loader-color;
+			animation: wave $loader-duration cubic-bezier(.85, .25, .37, .85) infinite;
+		}
+		.line-1 {
+			margin-left: 30%;
+		}
+		.line-1, .line-5 {
+			animation-delay: .4s;
+		}
+		.line-2, .line-4 {
+			animation-delay: .2s;
+		}
+	}
+}

@@ -1,0 +1,54 @@
+@import '../variables';
+
+.square-split {
+	.loader {
+		width: $loader-height;
+		height: $loader-height;
+		transform:rotate(45deg);
+
+		>div {
+			float: left;
+			width: 50%;
+			height: 50%;
+
+			&::after {
+				content: '';
+				display: block;
+				margin: 50% 0 0 50%;
+				width: 50%;
+				height: 50%;
+				background: $loader-color;
+				animation: squareSplit $loader-duration infinite ease-in-out alternate;
+			}
+		}
+		.square-2 {
+			transform: rotate(90deg);
+		}
+		.square-3 {
+			transform: rotate(270deg);
+			animation-direction: reverse;
+		}
+		.square-4 {
+			transform: rotate(180deg);
+			animation-direction: reverse;
+		}
+	}
+}
+@keyframes squareSplit {
+	10% {
+		transform: rotate(0deg);
+		margin: 50% 0 0 50%;
+	}
+	50% {
+		transform: rotate(90deg);
+		margin: 0px;
+	}
+	90% {
+		transform: rotate(180deg);
+		margin: 50% 0 0 50%;
+	}
+	100% {
+		transform: rotate(180deg);
+		margin: 50% 0 0 50%;
+	}
+}

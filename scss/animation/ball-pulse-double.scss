@@ -1,0 +1,30 @@
+@import '../variables';
+
+.ball-pulse-double {
+	.loader {
+		width: $loader-height;
+		height: $loader-height;
+	}
+	.ball-1, .ball-2 {
+		position: absolute;
+		top: 25%;
+		left: 25%;
+		width: 50%;
+		height: 50%;
+		background-color: $loader-color;
+		border-radius: 50%;
+		animation: ballPulseDouble $loader-duration ease-in-out infinite;
+		opacity: .5;
+	}
+	.ball-2 {
+		animation-delay: -$loader-duration/2;
+	}
+}
+@keyframes ballPulseDouble {
+	0%, 100% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1.0);
+	}
+}

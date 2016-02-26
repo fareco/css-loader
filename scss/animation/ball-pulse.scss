@@ -1,0 +1,25 @@
+@import '../variables';
+
+.ball-pulse {
+	.loader {
+		width: $loader-height;
+		height: $loader-height;
+	}
+	.ball {
+		margin: 25% 0 0 25%;
+		width: 50%;
+		height: 50%;
+		background-color: $loader-color;
+		border-radius: 50%;
+		animation: ballPulse $loader-duration ease-in-out infinite;
+	}
+}
+@keyframes ballPulse {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1.0);
+		opacity: 0;
+	}
+}
