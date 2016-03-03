@@ -1,0 +1,25 @@
+@import '../variables';
+$loader-duration: $loader-duration/2;
+
+.arc-rotate {
+	.loader {
+		width: $loader-height;
+		height: $loader-height;
+
+		.arc {
+			position: absolute;
+			border: 2px solid;
+			border-color: transparent $loader-color $loader-color $loader-color;
+			border-radius: 50%;
+			margin: 32% 0 0 32%;
+			width: 36%;
+			height: 36%;
+			animation: single-arc-rotate $loader-duration infinite linear;
+		}
+	}
+}
+@keyframes single-arc-rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}

@@ -5,8 +5,10 @@
 @import 'animation/wave-spread';
 @import 'animation/circle-pulse';
 @import 'animation/circle-pulse-multiple';
+@import 'animation/arc-rotate-double';
 @import 'animation/arc-rotate';
 @import 'animation/square-split';
+@import 'animation/arc-scale';
 
 %clearfix {
     &::before, &::after {

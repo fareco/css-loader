@@ -7,7 +7,7 @@ $loader-duration: 1s;
 		height: $loader-height;
 
 		>div {
-			margin: ($loader-height * .25 - 2px)  0 0 ($loader-weight *.25 - 2px);
+			margin: ($loader-height * .25 - 2px)  0 0 ($loader-width *.25 - 2px);
 			width: 50%;
 			height: 50%;
 			border: 2px solid $loader-color;

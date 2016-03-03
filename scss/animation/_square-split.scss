@@ -2,9 +2,8 @@
 
 .square-split {
 	.loader {
-		width: $loader-height;
+		width: $loader-width;
 		height: $loader-height;
-		transform:rotate(45deg);
 
 		>div {
 			float: left;
@@ -35,7 +34,7 @@
 	}
 }
 @keyframes squareSplit {
-	10% {
+	20% {
 		transform: rotate(0deg);
 		margin: 50% 0 0 50%;
 	}
@@ -43,7 +42,7 @@
 		transform: rotate(90deg);
 		margin: 0px;
 	}
-	90% {
+	80% {
 		transform: rotate(180deg);
 		margin: 50% 0 0 50%;
 	}
