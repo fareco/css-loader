@@ -1,0 +1,36 @@
+@import '../variables';
+$loader-duration: $loader-duration;
+
+
+.clock {
+	.loader {
+		width: $loader-height;
+		height: $loader-height;
+
+		.arc {
+			position: relative;
+			margin:23% 0 0 23%;
+			border: $loader-width*.02 solid $loader-color;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+		}
+		.arc::after,.arc::before{
+			content: '';
+			position: absolute;
+			top: 4%;
+			left: 48%;
+			width: 4%;
+			height: 46%;
+			background-color:$loader-color ;
+			transform-origin: 50% 100%;
+			border-radius: 5px;;
+			animation:rotate $loader-duration infinite linear;
+		}
+		.arc::after{
+			height: 36%;
+			top: 14%;
+			animation-duration: $loader-duration*6;
+		}
+	}
+}

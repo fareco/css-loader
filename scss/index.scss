@@ -9,6 +9,8 @@
 @import 'animation/arc-rotate';
 @import 'animation/square-split';
 @import 'animation/arc-scale';
+@import 'animation/clock';
+@import 'animation/arc-rotate2';
 
 %clearfix {
     &::before, &::after {
@@ -37,14 +39,14 @@ body {
 }
 #loaders {
     margin: 0 auto;
-    width: 800px;
+    width: 1000px;
     @extend %clearfix;
 }
 .loader-container {
     position: relative;
     float: left;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
 
     .loader {
         @extend %middle;

@@ -1,0 +1,34 @@
+@import '../variables';
+$loader-duration: $loader-duration/2;
+
+.arc-rotate2 {
+	.loader {
+		width: $loader-width;
+		height: $loader-height;
+
+		.arc{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+		.arc::before,.arc::after{
+			content: '';
+			position: absolute;
+			top: 32%;
+			left: 32%;
+			border: 2px solid;
+			border-radius: 50%;
+			width: 36%;
+			height: 36%;
+		}
+		.arc::before{
+			border-color:$loader-color;
+			opacity: .3;
+		}
+		.arc::after{
+			border-color: transparent ;
+			border-bottom-color: $loader-color;
+			animation:rotate $loader-duration infinite linear;
+		}
+	}
+}
