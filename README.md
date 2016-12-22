@@ -2,4 +2,4 @@
 
 Pure css loading animation.
 
-See [dome](http://fareco.github.io/css-loader/).
+See <a href="http://fareco.github.io/css-loader/" target="_blank">Demo</a>.
